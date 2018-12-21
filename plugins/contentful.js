@@ -5,7 +5,8 @@ const contentful = require('contentful');
 const config = {
   space: process.env.CTF_SPACE_ID,
   environment: process.env.CTF_ENVIRONMENT || 'master',
-  accessToken: process.env.CTF_CDA_ACCESS_TOKEN
+  accessToken: process.env.CTF_CDA_PREVIEW_TOKEN,
+  host: process.env.CTF_HOST,
 }
 
 // export `createClient` to use it in page components

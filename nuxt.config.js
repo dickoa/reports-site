@@ -6,7 +6,8 @@ const contentful = require('contentful');
 const client = contentful.createClient({
   space: api.CTF_SPACE_ID,
   environment: api.CTF_ENVIRONMENT,
-  accessToken: api.CTF_CDA_ACCESS_TOKEN,
+  accessToken: api.CTF_CDA_PREVIEW_TOKEN,
+  host: api.CTF_HOST,
 });
 
 module.exports = {
@@ -17,6 +18,8 @@ module.exports = {
     CTF_SPACE_ID: api.CTF_SPACE_ID,
     CTF_ENVIRONMENT: api.CTF_ENVIRONMENT || 'master',
     CTF_CDA_ACCESS_TOKEN: api.CTF_CDA_ACCESS_TOKEN,
+    CTF_CDA_PREVIEW_TOKEN: api.CTF_CDA_PREVIEW_TOKEN,
+    CTF_HOST: api.CTF_HOST || 'cdn.contentful.com',
     baseUrl: api.BASE_URL || 'https://reports.unocha.org',
     tmpBasicAuthUser: api.BASIC_AUTH_USER || '',
     tmpBasicAuthPass: api.BASIC_AUTH_PASS || '',
